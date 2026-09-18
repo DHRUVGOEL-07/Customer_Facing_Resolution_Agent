@@ -102,23 +102,8 @@ drift, and complete protection against retrieval hallucinations.
 
 ---
 
-## 3. Scenario Outcomes
 
-| Scenario | Agent Resolves | Agent Escalates |
-| --- | --- | --- |
-| **1 — Priya (Gold, SK4821X)**<br>
-
-<br>SK-204 cancelled | Free rebooking within 24h **or** full refund (customer choice, 7 business days to original payment method); Gold priority rebooking | Demanding a free business-class upgrade on return flight (prohibited: no rule grants cabin upgrades) |
-| **2 — Arvind (Silver, TR1190B)**<br>
-
-<br>SK-118 delayed 4h | ₹500 meal voucher + lounge access | Nothing. His hotel request is declined in-policy (hotel requires >5h delay). Silver tier receives no priority rebooking |
-| **3 — Meher (Platinum, WL7742)**<br>
-
-<br>SK-305 delayed 6h | ₹500 meal voucher + hotel covering **6 delayed hours only**; Platinum priority rebooking | Escalated for two reasons: requesting a full night's hotel (exceeds policy), and requesting a ₹2,000 fare waiver (exceeds the ₹1,500 agent ceiling) |
-
----
-
-## 4. Inputs, Sources, and Assumptions Used
+## 3. Inputs, Sources, and Assumptions Used
 
 ### Verified Inputs & Sources
 
@@ -141,7 +126,7 @@ Gold and Platinum tiers grant priority seat-inventory access, but never justify 
 
 ---
 
-## 5. Security & Invariant Defenses
+## 54. Security & Invariant Defenses
 
 * **Prompt Injection Isolation:** Customer messages are wrapped inside `<customer_message>` XML tags. System instructions are passed via the native SDK `system_instruction` parameter, establishing a strict barrier between operational rules and untrusted user input.
 * **Deterministic Fail-Safe Fallback:** If the Gemini API experiences network timeouts or a 503 Overload error, `_deterministic_fallback_reply()` formats the pre-computed policy facts into a clean, bulleted summary. The app remains functional without crashing.
@@ -151,7 +136,7 @@ Gold and Platinum tiers grant priority seat-inventory access, but never justify 
 
 ---
 
-## 6. Failure Modes Handled
+## 5. Failure Modes Handled
 
 | Failure Mode | System Behavior |
 | --- | --- |
@@ -163,7 +148,7 @@ Gold and Platinum tiers grant priority seat-inventory access, but never justify 
 
 ---
 
-## 7. AI Tools Used and How
+## 6. AI Tools Used and How
 
 | Tool | Implementation Role | Justification |
 | --- | --- | --- |
@@ -174,7 +159,7 @@ Gold and Platinum tiers grant priority seat-inventory access, but never justify 
 
 ---
 
-## 8. Project Structure
+## 7. Project Structure
 
 ```
 airline-resolution-agent/
