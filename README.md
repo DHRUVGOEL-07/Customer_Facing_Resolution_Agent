@@ -1,6 +1,7 @@
 ```markdown
 # Customer-Facing Resolution Agent — Airline Disruption
-
+**🌍 Live Demo:** [customerfacingresolutionagent.streamlit.app](https://customerfacingresolutionagent.streamlit.app/)
+**Author:** Dhruv Goel
 Assignment 3, AGENTIC AI FACTORY | AIONOS. A support agent that resolves airline
 disruption cases from the supplied Data Pack, enforces company policy limits
 deterministically, and escalates to human agents the moment a request exceeds its
