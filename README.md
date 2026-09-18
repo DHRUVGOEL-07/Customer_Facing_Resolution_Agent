@@ -12,7 +12,7 @@ authority.
 git clone <your-repo-url> && cd resolution_agent
 python -m venv venv && source venv/bin/activate    # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-export GEMINI_API_KEY="your_api_key_here"         # or create a .env file
+add GEMINI_API_KEY="your_api_key_here"         # create a .env file
 streamlit run app.py
 
 ```
